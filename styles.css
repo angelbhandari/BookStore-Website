@@ -1,0 +1,506 @@
+/* RESET */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f9f4ec;
+  color: #1a1208;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+}
+/* cart,index page */
+#books { 
+  padding: 4rem 5%; 
+}
+.books-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill,minmax(185px, 1fr)); 
+  gap: 1.5rem; 
+}
+
+.book-card { 
+  background: #fdfaf5; 
+  border-radius: 12px; 
+  border: 1px solid #e5d8c8; 
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column; 
+  transition: transform 0.25s ease,box-shadow 0.25s ease; 
+  box-shadow:  0 2px 8px rgba(44,20,8,.08); 
+}
+.book-card:hover { 
+  transform: translateY(-6px); 
+  box-shadow:  0 6px 24px rgba(44,20,8,.12);
+}
+.imgbook { 
+  width: 100%; 
+  height: 240px; 
+  overflow: hidden; 
+  position: relative; 
+  background: #f0e8da;
+}
+.imgbook img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: top; 
+  transition: transform .4s ease;
+}
+.book-card:hover .imgbook img { 
+  transform: scale(1.06);
+}
+.book-tag { 
+  position: absolute;
+  top: 10px; 
+  left: 10px; 
+  font-size: .62rem; 
+  font-weight: 600; 
+  letter-spacing: .08em; 
+  text-transform: uppercase; 
+  padding: .22rem .6rem; 
+  border-radius: 3px;
+}
+.tag-best { 
+  background: #d4a84b; 
+  color: #2e1a0e;
+}
+.tag-new  { 
+  background:#7a8c6e ; 
+  color: #fff; 
+}
+.tag-sale { 
+  background: #c0392b; 
+  color: #fff;
+}
+.book-info { 
+  padding: 1rem; 
+  display: flex; 
+  flex-direction: column; 
+  flex: 1;
+}
+.book-info h3 { 
+  font-family: 'Cormorant Garamond', Georgia, serif; 
+  font-size: 1.05rem; 
+  font-weight: 600; 
+  color:#2e1a0e; 
+  line-height: 1.3; 
+  min-height: 2.6rem; 
+  margin-bottom: .3rem;
+}
+.author { 
+  font-family: 'Dancing Script', cursive; 
+  font-size: .92rem; 
+  color: #8b7055; 
+  margin-bottom: .6rem;
+}
+.book-footer { 
+  margin-top: auto; 
+  display: flex; 
+  align-items: center; 
+  gap: .6rem; 
+  flex-wrap: wrap; 
+  padding-top: .5rem; 
+  border-top: 1px solid #e5d8c8;
+}
+.price { 
+  font-size: 1rem; 
+  font-weight: 600; 
+  color: #c8763a;
+}
+.before-price { 
+  font-size: .82rem; 
+  color: #bbb; 
+  text-decoration: line-through;
+}
+.add-cart { 
+  margin-top: .7rem; 
+  width: 100%; 
+  padding: .52rem; 
+  background:#2e1a0e;
+  color: #fff; 
+  border: none; 
+  border-radius: 6px;
+  font-size: .82rem;
+  font-weight: 500; 
+  letter-spacing: .04em; 
+  transition: background 0.25s ease, 
+  transform .15s; 
+}
+.add-cart:hover { 
+  background: #c8763a; 
+  transform: translateY(-1px);
+}
+
+/* NAV */
+nav {
+  background: #3b2410;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #d4a852;
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: #f9f4ec;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #e8ddd0;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  color: #d4a852;
+}
+
+.nav-cta {
+  background: #c97d3a;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+/* HERO */
+.hero {
+      background: #3b2410;
+      color:#f9f4ec;
+      padding: 80px 60px;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-right: 420px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: '"';
+      position: absolute;
+      right: 5%;
+      top: -2rem;
+      font-family:'Playfair Display', Georgia, serif;
+      font-size: 28rem;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: #c97d3a;
+      color:  #fdfaf5;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-image{
+    position:absolute;
+      
+      top:5px;
+      right:300px;
+      width:400px;
+      border-radius:20px;
+    
+    }
+    .hero-image img{
+    
+      width:500px;
+      border-radius: 20px;
+      box-shadow: 0 10 25px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+
+    }
+    .hero-image img:hover{
+      transform: scale(1.05);
+    }
+    .hero-content{
+      flex:1;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      color: #fdfaf5;
+      grid-column: 1;
+    }
+
+    .hero h1 em { color: #d4a852; font-style: italic; }
+
+    .hero p {
+      color:#e8ddd0;
+      font-size: 1.05rem;
+      max-width: 420px;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      background: #c97d3a;
+      color:  #fdfaf5;
+      padding: 0.75rem 1.8rem;
+      border: none;
+      border-radius: 4px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.15s;
+    }
+   
+
+    .btn-primary:hover { background: #b56c2a; 
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #d4a852;
+      padding: 0.75rem 1.8rem;
+      border: 1.5px solid #d4a852;
+      border-radius: 4px;
+      font-family:'DM Sans', sans-serif ;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .btn-outline:hover { background: rgba(212,168,82,0.12); }
+
+.btn-primary {
+  background: #c97d3a;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: #b56c2a;
+}
+
+
+    /* ── SEARCH ── */
+    #search {
+      background: #fdfaf5;
+      padding: 3.5rem 5%;
+      border-bottom: 1px solid #e8ddd0;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #c97d3a;
+      margin-bottom: 0.5rem;
+    }
+
+    #search h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem;
+      color: #3b2410;
+      margin-bottom: 1.8rem;
+    }
+
+    .search-bar {
+      display: flex;
+      max-width: 680px;
+      border: 2px solid #e8ddd0;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(58, 36, 16, 0.12);
+      transition: border-color 0.2s;
+    }
+
+    .search-bar:focus-within { border-color: #c97d3a; }
+
+    .search-bar input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 0.9rem 1.2rem;
+      font-family:'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #1a1208;
+      background: transparent;
+    }
+
+    .search-bar select {
+      border: none;
+      border-left: 1px solid #e8ddd0;
+      outline: none;
+      padding: 0 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #3b2410;
+      background: #f9f4ec;
+      cursor: pointer;
+    }
+
+    .search-bar button {
+      background: #c97d3a;
+      color: #fff;
+      border: none;
+      padding: 0 1.4rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .search-bar button:hover { background: #b56c2a; }
+
+    .search-tags {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .search-tags span {
+      font-size: 0.8rem;
+      color: #3b2410;
+      font-weight: 300;
+    }
+
+    .tag {
+      background: #e8ddd0;
+      border: none;
+      padding: 0.3rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #3b2410;
+      cursor: pointer;
+      font-family:'DM Sans', sans-serif;
+      transition: background 0.2s;
+    }
+
+    .tag:hover { background: #c97d3a; color: #fff;
+    }
+
+
+/* featured books */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2.5rem;
+    }
+
+
+/* footer */
+    footer {
+      background: #1a1208;
+      color: #e8ddd0;
+      padding: 3rem 5% 1.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.4rem;
+      color: #d4a852;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: #8a7a6a;
+      line-height: 1.6;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #d4a852;
+      margin-bottom: 0.9rem;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li { margin-bottom: 0.5rem; }
+
+    .footer-col ul li a {
+      color: #8a7a6a;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 300;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: #e8ddd0; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #5a4e44;
+    }
+
+/* hero page of faqs,contact */
+
+
+.page-hero {
+  background:#2e1a0e;
+  padding: 4rem 5%;
+  color: #f7f1e8;
+}
+.page-hero h1 {
+  font-family:'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  margin-bottom: .6rem;
+  color: #fdfaf5;
+}
+
+.page-hero p {
+  color: #c0b5a8;
+  font-weight: 300;
+  max-width: 520px;
+}
+.page-hero a {
+  color: #d4a84b;
+  text-decoration: underline;
+}

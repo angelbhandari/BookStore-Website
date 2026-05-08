@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="styles.css">
+
+        
+        <title>Book Zone</title>
+        <style>
+.section-body ul {
+    list-style-type: none;
+    width: 18%;
+    position: fixed;
+    height: auto;
+    overflow: auto;
+    background: #FFF6E8;
+    border-right: 1px solid #B2996E;
+    padding: 20px;
+  }
+
+  .section-body ul h4{
+    font-size: 2rem;
+    color: #3b2410;
+  }
+  
+  .section-body  li a {
+    font-size: 1.5rem;
+    display: block;
+    color: #3b2410;
+    padding: 8px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 0;
+  }
+  
+  .section-body li a:hover {
+    background-color: #bdb9b9;
+  }
+/* NAVBAR */
+.navbar {
+  background: #3b2410;
+  color: #f9f4ec;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+   </style>
+    </head>
+    <body>
+        <div class="navbar">
+        <a href="index.html" class="nav-logo">The Cozy<span>Page</span></a>
+        <div class="nav-links">
+            
+            <a href="categories.html">Categories</a>
+            <a href="contact.html">Contact</a>
+            <a href="FAQs.html">FAQs</a>
+             <li><a href="login.html">Sign Up</a></li>
+            <a href="cart.html" class="cart-btn">Cart</a>
+        </div>
+    </div>
+        <div class="section-body">
+            <div class="vertical-nav">
+                <ul>
+                    <h4><left>Category</left></h4>
+                    <li><a href="#Fiction">Fiction</a></li>
+                    <li><a href="#Non-Fiction">Non-Fiction</a></li>
+                    <li><a href="#Self-Help">Self-Help</a></li>
+                    <li><a href="#Mangas">Mangas</a></li>
+                </ul>
+            </div>
+
+            <div class="gallery-main" style="margin-left:25%;padding:1px 16px;height:1000px;">
+                <div class="Fiction" id="Fiction">
+                    <h2>Fiction</h2>
+                    <div class="books-grid">
+
+    <div class="book-card">
+        <div class="imgbook">
+      <img src="https://gyaanstore.com/cdn/shop/files/76_19c5d4ad-4724-4c92-bd98-57cf88dc7b19.png?v=1757535829&width=713" alt="The Silent Patient">
+    
+    </div>
+      <div class="book-info">
+        <h3>The Silent Patient</h3>
+        <p class="author">Alex Michaelides</p>
+        <div class="book-footer">
+          <span class="price">₹169</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+    <div class="imgbook">
+      <img src="https://gyaanstore.com/cdn/shop/files/196_52878550-2637-45f2-8f63-87e0db520507.png?v=1757578238&width=713" alt="Before the Coffee Gets Cold">
+    </div>
+      <div class="book-info">
+        <h3>Before the Coffee Gets Cold</h3>
+        <p class="author">Toshikazu Kawaguchi</p>
+        <div class="book-footer">
+          <span class="price">₹349</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+       <div class="imgbook">
+         <img src="https://gyaanstore.com/cdn/shop/files/4_498009b9-d82f-41ea-ad5d-12aa47315142.png?v=1757535725&width=360" alt="Better Than The Movies">
+       </div>
+      <div class="book-info">
+        <h3>Better Than The Movies</h3>
+        
+        <p class="author"> Lynn Painter</p>
+        <div class="book-footer">
+          <span class="price">₹169</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+       <div class="imgbook">
+          <img src="https://gyaanstore.com/cdn/shop/files/248_069c10a1-742f-466b-8505-593c9b819135.png?v=1757578221&width=713" alt="Verity">
+       </div>
+      <div class="book-info">
+        <h3>Verity</h3>
+        <p class="author">Colleen Hoover</p>
+        <div class="book-footer">
+          <span class="price">₹299</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+       <div class="imgbook">
+        <img src="https://gyaanstore.com/cdn/shop/files/53.png?v=1757535833&width=713" alt="Normal People: A Novel">
+        </div>
+      <div class="book-info">
+        <h3>Normal People: A Novel</h3>
+        <p class="author">Sally Rooney</p>
+        <div class="book-footer">
+          <span class="price">₹479</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+    </div>
+    </div>
+<div class="Non-Fiction" id="Non-Fiction">
+     <h2>Non-Fiction</h2>
+         <div class="books-grid">
+    <div class="book-card">
+        <div class="imgbook">
+      <img src="https://gyaanstore.com/cdn/shop/files/222.png?v=1757578237&width=360">
+    </div>
+      <div class="book-info">
+        <h3>The 48 Laws of Power</h3>
+        <p class="author"> Robert Greene</p>
+        <div class="book-footer">
+          <span class="price">₹399</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+    <div class="imgbook">
+      <img src="https://gyaanstore.com/cdn/shop/files/77_0d512ad7-fbd9-48ed-93f3-3451743bf6f6.png?v=1757535840&width=713">
+    </div>
+      <div class="book-info">
+        <h3>The Mountain Is You</h3>
+        <p class="author">Brianna Wiest</p>
+        <div class="book-footer">
+          <span class="price">₹449</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+       <div class="imgbook">
+         <img src="https://gyaanstore.com/cdn/shop/files/294.png?v=1757535835&width=713">
+       </div>
+      <div class="book-info">
+        <h3>The Power of Now</h3>
+        <p class="author">Eckhart Tolle</p>
+        <div class="book-footer">
+          <span class="price">₹529</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+       <div class="imgbook">
+          <img src="https://gyaanstore.com/cdn/shop/files/33_1ab6b7ba-57ee-456f-82cf-3fdee85d0cd1.png?v=1757535471&width=713">
+       </div>
+      <div class="book-info">
+        <h3>Win Every Argument</h3>
+        <p class="author">Mehdi Hasan</p>
+        <div class="book-footer">
+          <span class="price">₹299</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <div class="book-card">
+      <div class="imgbook">
+       
+      <img src="https://gyaanstore.com/cdn/shop/files/92_695a134f-eb66-4bf8-a35b-df26cc1a368b.png?v=1757535705&width=713">
+      </div>
+      <div class="book-info">
+        <h3>Beyond Order</h3>
+        <p class="author">Jordan B. Peterson</p>
+        <div class="book-footer">
+          <span class="price">₹245</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+ </div>
+</div>
+
+                        
+<div class="Self-Help" id="Selp-Help">
+        <h2>Self-Help</h2>
+          <div class="books-grid">
+
+    <div class="book-card">
+        <div class="imgbook">
+      <img src="https://gyaanstore.com/cdn/shop/files/81_2a821c7e-10d2-4d35-85bf-93f368823284.png?v=1757578094&width=713">
+    
+    </div>
+      <div class="book-info">
+        <h3>The Power of Habit</h3>
+        <p class="author">Charles Duhigg</p>
+        <div class="book-footer">
+          <span class="price">₹399</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+    <div class="imgbook">
+      <img src="https://gyaanstore.com/cdn/shop/files/229_59b34caf-7587-4549-8678-6abc70b257e1.png?v=1757578239&width=713">
+    </div>
+      <div class="book-info">
+        <h3>12 Rules for Life</h3>
+        <p class="author">Jordan B. Peterson</p>
+        <div class="book-footer">
+          <span class="price">₹449</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+
+    <div class="book-card">
+       <div class="imgbook">
+          <img src="https://gyaanstore.com/cdn/shop/files/287_593bd154-30a9-4dfb-b54a-404c6671762f.png?v=1757578301&width=713">
+       </div>
+      <div class="book-info">
+        <h3>Think and Grow Rich</h3>
+        <p class="author">Napoleon Hill</p>
+        <div class="book-footer">
+          <span class="price">₹299</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+       <div class="imgbook">
+        <img src="https://gyaanstore.com/cdn/shop/files/32_9363412d-4c28-455d-ac28-e0614f1bc956.png?v=1757578372&width=713">
+        </div>
+      <div class="book-info">
+        <h3>Ego is The Enemy</h3>
+        <p class="author">Ryan Holiday</p>
+        <div class="book-footer">
+          <span class="price">₹345</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <div class="imgbook">
+       
+      <img src="https://gyaanstore.com/cdn/shop/files/273_350e4a8f-8dfd-44ae-957b-7a2d39bbb113.png?v=1757578154&width=713">
+      </div>
+      <div class="book-info">
+        <h3>Don't Believe Everything You Think</h3>
+        <p class="author">Joseph Nguyen</p>
+        <div class="book-footer">
+          <span class="price">₹410</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="Mangas" id="Mangas">
+    <h2>Mangas</h2>
+    <div class="books-grid">
+
+    <div class="book-card">
+        <div class="imgbook">
+      <img src="https://gyaanstore.com/cdn/shop/files/naruto.png?v=1757578123&width=713">
+    
+    </div>
+      <div class="book-info">
+        <h3>Naruto, Vol. 1</h3>
+        <p class="author">Masashi Kishimoto </p>
+        <div class="book-footer">
+          <span class="price">₹455</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+       <div class="imgbook">
+         <img src="https://gyaanstore.com/cdn/shop/files/117.png?v=1757578232&width=713">
+       </div>
+      <div class="book-info">
+        <h3>Spy x Family, Vol. 1</h3>
+        
+        <p class="author"> Tatsuya Endo</p>
+        <div class="book-footer">
+          <span class="price">₹345</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+       <div class="imgbook">
+          <img src="https://gyaanstore.com/cdn/shop/files/214.png?v=1757535899&width=713">
+       </div>
+      <div class="book-info">
+        <h3>Bleach Vol 1</h3>
+        <p class="author"> Tite Kubo </p>
+        <div class="book-footer">
+          <span class="price">₹199</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+       <div class="imgbook">
+        <img src="https://gyaanstore.com/cdn/shop/files/180.png?v=1757578108&width=713">
+        </div>
+      <div class="book-info">
+        <h3>The Garden of Words</h3>
+        <p class="author">Makoto Shinkai </p>
+        <div class="book-footer">
+          <span class="price">₹259</span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <div class="imgbook">
+       
+      <img src="https://gyaanstore.com/cdn/shop/files/165.png?v=1757535778&width=713">
+      </div>
+      <div class="book-info">
+        <h3>Vinland Saga Vol 1</h3>
+        <p class="author">Makoto Yukimura</p>
+        <div class="book-footer">
+          <span class="price">₹399</span>
+
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+    </div>
+    <br>
+    <right> <a href="/index.html" class="btn"> Back</a></right>
+<script src="categories.js"></script>
+    </body>
+
+</html>

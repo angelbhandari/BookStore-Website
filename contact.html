@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+#contact { 
+  padding: 4.5rem 5%; 
+  background: #fdfaf5; 
+  border-top: 1px solid #e5d8c8;
+}
+.contact-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1.2fr; 
+  gap: 5rem; 
+  align-items: start;
+}
+.contact-info h2 { 
+  font-family: 'Cormorant Garamond', Georgia, serif; 
+  font-size: 2.2rem; 
+  font-weight: 600; 
+  color: #2e1a0e; 
+  margin-bottom: 1rem; 
+  line-height: 1.2; 
+}
+.contact-info > p { 
+  color: #5a4a38; 
+  font-weight: 300; 
+  margin-bottom: 2rem; 
+  line-height: 1.75; 
+}
+.contact-detail { 
+  display: flex; 
+  gap: .9rem; 
+  align-items: 
+  flex-start; 
+  margin-bottom: 1.2rem; 
+}
+.contact-detail .icon { 
+  font-size: 1.2rem; 
+  margin-top: .1rem; 
+}
+.contact-detail strong { 
+  display: block; 
+  font-size: .78rem; 
+  font-weight: 600; 
+  color: #2e1a0e; 
+  text-transform: uppercase; 
+  letter-spacing: .07em; 
+  margin-bottom: .15rem; 
+}
+.contact-detail span { 
+  font-size: .9rem; 
+  color: #6a5748; 
+  font-weight: 300; 
+}
+.form-card { 
+  background: #fff; 
+  border-radius: 12px; 
+  padding: 2.4rem; 
+  box-shadow: 0 6px 24px rgba(44,20,8,.12); 
+  border: 1px solid #e5d8c8; 
+}
+.form-card h3 { 
+  font-family:'Cormorant Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  color: #2e1a0e;
+  margin-bottom: 1.5rem; 
+}
+.form-row { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 1rem; 
+}
+.form-group { 
+  margin-bottom: 1rem; 
+}
+.form-group label { 
+  display: block; 
+  font-size: .76rem; 
+  font-weight: 600; 
+  color: #2e1a0e; 
+  text-transform: uppercase; 
+  letter-spacing: .07em; 
+  margin-bottom: .4rem;
+ }
+.form-group input, .form-group select, .form-group textarea { 
+  width: 100%; 
+  padding: .75rem .9rem; 
+  border: 1.5px solid #e5d8c8; 
+  border-radius:6px; 
+  font-family:'Outfit', sans-serif; 
+  font-size: .92rem; 
+  color: #1c1208;
+  background: #fdfaf5; 
+  outline: none; 
+  transition: border-color 0.25s ease;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { 
+  border-color: #c8763a; 
+  background: #fff;
+ }
+.form-group textarea { 
+  resize: vertical; 
+  min-height: 110px; 
+}
+.form-submit { 
+  width: 100%; 
+  background: #2e1a0e; 
+  color: #fdfaf5; 
+  border: none; 
+  padding: .9rem; 
+  border-radius: 6px; 
+  font-family:'Outfit', sans-serif; 
+  font-size: .95rem; 
+  font-weight: 500; 
+  cursor: pointer; 
+  letter-spacing: .05em; 
+  transition: background 0.25s ease; 
+  margin-top: .4rem; }
+.form-submit:hover { 
+  background: #c8763a; 
+}
+.contact-quick-cards {
+  display: flex;
+  gap: .8rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.contact-quick-card {
+  background: #f0e8da;
+  border: 1px solid #e5d8c8;
+  border-radius: 6px;
+  padding: .9rem 1.1rem;
+  flex: 1;
+  min-width: 130px;
+}
+.contact-quick-card-icon {
+  font-size: 1.4rem;
+ }
+.contact-quick-card-title {
+  font-size: .78rem;
+  font-weight: 600;
+  color: #2e1a0e;
+  margin: .3rem 0 .1rem;
+}
+.contact-quick-card-desc {
+  font-size: .75rem;
+  color: #8a7a6a;
+  font-weight: 300;
+}
+
+
+</style>
+<body>
+
+
+<nav>
+  <a href="index.html" class="nav-logo">The Cozy<span>Page</span></a>
+  <ul class="nav-links">
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="contact.html" class="nav-active">Contact</a></li>
+    <li><a href="FAQs.html">FAQs</a></li>
+     <li><a href="login.html">Sign Up</a></li>
+    <li><a href="cart.html" class="nav-cta">🛒 Cart</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <p class="section-label">We're Here for You</p>
+  <h1>Get in Touch</h1>
+  <p>Whether you're looking for a title, need help with an order, or just want a recommendation — we're always happy to hear from you.</p>
+</section>
+
+<section id="contact">
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <p class="section-label">Reach Us</p>
+      <h2>We'd Love to Hear From You</h2>
+      <p>Our team of book-lovers is ready to help you find your next favourite read, sort out any order, or just chat about books.</p>
+
+      <div class="contact-detail">
+        <span class="icon">📍</span>
+        <div>
+          <strong>Visit Us</strong>
+          <span>12 Book Lane, Sector 17, Chandigarh — 160017</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="icon">📞</span>
+        <div>
+          <strong>Call Us</strong>
+          <span>+91 98765 43210</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="icon">✉️</span>
+        <div>
+          <strong>Email</strong>
+          <span>hello@thecozypagestore.in</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="icon">🕐</span>
+        <div>
+          <strong>Store Hours</strong>
+          <span>Mon–Sat: 10am – 8pm | Sun: 11am – 6pm</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="icon">🚚</span>
+        <div>
+          <strong>Order Support</strong>
+          <span>Mon–Sat 9am – 9pm · orders@thecozypagestore.in</span>
+        </div>
+      </div>
+
+      <div class="contact-quick-cards">
+        <div class="contact-quick-card">
+          <div class="contact-quick-card-icon">📦</div>
+          <div class="contact-quick-card-title">Free Shipping</div>
+          <div class="contact-quick-card-desc">On all orders</div>
+        </div>
+        <div class="contact-quick-card">
+          <div class="contact-quick-card-icon">🔄</div>
+          <div class="contact-quick-card-title">Easy Returns</div>
+          <div class="contact-quick-card-desc">Within 7 days</div>
+        </div>
+        <div class="contact-quick-card">
+          <div class="contact-quick-card-icon">💬</div>
+          <div class="contact-quick-card-title">Live Chat</div>
+          <div class="contact-quick-card-desc">Coming soon!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>Send Us a Message</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="Priya">
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Sharma">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+91 98765 43210">
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject">
+          <option value="">Select a topic…</option>
+          <option>Book Inquiry</option>
+          <option>Order &amp; Delivery</option>
+          <option>Bulk Orders</option>
+          <option>Returns &amp; Refunds</option>
+          <option>Book Recommendation</option>
+          <option>Gift Wrapping</option>
+          <option>Membership / Loyalty</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="order">Order ID (optional)</label>
+        <input type="text" id="order" placeholder="e.g. TCP-2025-00123">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Tell us how we can help…"></textarea>
+      </div>
+      <button class="form-submit" type="submit">Send Message →</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">The CozyPage</div>
+      <p>A curated bookstore for curious minds. Every book is a door to a new world — we help you find the right one.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link">📘</a>
+        <a href="#" class="social-link">📸</a>
+        <a href="#" class="social-link">🐦</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Bestsellers</a></li>
+        <li><a href="#">Used Books</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">Track Order</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 The Cozy Page Bookstore. All rights reserved.</span>
+    <span>Made with ❤️ for book lovers</span>
+  </div>
+</footer>
+
+<script src="contact.js"></script>
+</body>
+</html>

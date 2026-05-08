@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+     <link rel="stylesheet" href="styles.css">
+    <style>
+
+.cart-page { 
+    padding: 3rem 5%;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+.cart-page h1 { 
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem; 
+    color: #2e1a0e;
+    margin-bottom: 2rem;
+}
+.cart-layout { 
+    display: grid; 
+    gap: 2rem; 
+    align-items: start;
+}
+.cart-item { 
+    background: #fdfaf5;
+    border: 1px solid #e5d8c8; 
+    border-radius: 12px; 
+    padding: 1.2rem; 
+    display: flex; 
+    gap: 1.2rem; 
+    align-items: center; 
+    margin-bottom: 1rem; 
+    box-shadow: 0 2px 8px rgba(44,20,8,.08); 
+}
+.cart-item:hover { 
+    box-shadow: 0 6px 24px rgba(44,20,8,.12);
+}
+.cart-item-img { 
+    width: 68px; 
+    height: 88px; 
+    border-radius: 6px; 
+    overflow: hidden; 
+    flex-shrink: 0;
+}
+.cart-item-img img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+.cart-item-info { 
+    flex: 1;
+}
+.cart-item-info h3 { 
+    font-family:  'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+    color: #2e1a0e; 
+    margin-bottom: .2rem; 
+}
+.cart-item-info .author { 
+    font-size: .82rem; 
+    margin-bottom: .3rem;
+}
+.cart-item-price { 
+    font-size: 1rem; 
+    font-weight: 600; 
+    color: #c8763a;
+}
+.cart-summary-box { 
+    background: #fdfaf5;
+    border: 1px solid #e5d8c8; 
+    border-radius:12px; 
+    padding: 1.8rem; 
+    box-shadow: 0 6px 24px rgba(44,20,8,.12); 
+    position: sticky; 
+    top: 90px;
+}
+.cart-summary-box h2 { 
+    font-family: 'Cormorant Garamond', Georgia, serif; 
+    font-size: 1.5rem; 
+    color: #2e1a0e; 
+    margin-bottom: 1.2rem; 
+    padding-bottom: .8rem; 
+    border-bottom: 1px solid #e5d8c8;
+}
+.cart-row { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: .7rem; 
+    font-size: .92rem; 
+    color: #5a4a38; 
+}
+.cart-row.total { 
+    border-top: 1px solid #e5d8c8;
+    padding-top: .8rem; 
+    margin-top: .5rem; 
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #2e1a0e; }
+.coupon-row { 
+    display: flex;
+    gap: .5rem; 
+    margin: 1rem 0 1.2rem;
+
+}
+.coupon-row input { 
+    flex: 1; 
+    border: 1.5px solid #e5d8c8;
+    border-radius: 6px; 
+    padding: .55rem .8rem; 
+    font-family: 'Outfit', sans-serif; 
+    font-size: .85rem; 
+    outline: none; 
+    transition: border-color 0.25s ease;
+}
+.coupon-row input:focus { 
+    border-color:#c8763a;
+}
+.coupon-row button { 
+    background:#e5d8c8; 
+    color:#2e1a0e; 
+    border: none; 
+    padding: .55rem .9rem; 
+    border-radius: 6px; 
+    font-size: .82rem; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: background 0.25s ease;
+}
+.coupon-row button:hover { 
+    background: #c8763a; 
+    color: #fff;
+}
+.pay-btn { 
+    width: 100%; 
+    background:#2e1a0e; 
+    color: #fff; 
+    border: none; 
+    padding: .9rem; 
+    border-radius: 6px; 
+    font-family: 'Outfit', sans-serif; 
+    font-size: .95rem; 
+    font-weight: 500; 
+    cursor: pointer; 
+    transition: background 0.25s ease; 
+    text-align: center; 
+    display: block;
+    letter-spacing: .04em;
+}
+.pay-btn:hover { 
+    background:#c8763a;
+}
+
+</style>
+</head>
+<body>
+    <nav>
+  <a href="index.html" class="nav-logo">The Cozy<span>Page</span></a>
+  <ul class="nav-links">
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="FAQs.html">FAQs</a></li>
+    <li><a href="login.html">Sign Up</a></li> 
+    <li><a href="cart.html" class="nav-cta">🛒 Cart</a></li>
+  </ul>
+</nav>
+
+<div class="cart-page">
+  <h1>Your Shopping Cart</h1>
+
+  <div class="cart-layout">
+
+    <div class="cart-items-list">
+
+      <div class="cart-item">
+        <div class="cart-item-img">
+          <img src="https://gyaanstore.com/cdn/shop/files/44_fd6f439d-6332-4ed7-8baf-dbf356150eab.png?v=1757535607&width=1946" alt="The Midnight Library">
+        </div>
+        <div class="cart-item-info">
+          <h3>The Midnight Library</h3>
+          <p class="author">Matt Haig</p>
+          <p class="cart-item-price">₹399</p>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <div class="cart-item-img">
+          <img src="https://gyaanstore.com/cdn/shop/files/230_2581bdfc-eb21-4ecd-b310-4f79a6f8de88.png?v=1757578371" alt="Atomic Habits">
+        </div>
+        <div class="cart-item-info">
+          <h3>Atomic Habits</h3>
+          <p class="author">James Clear</p>
+          <p class="cart-item-price">₹449</p>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <div class="cart-item-img">
+          <img src="https://gyaanstore.com/cdn/shop/files/79_d65ac26c-c257-4756-9b57-41b7d00dacd4.png?v=1757578184&width=1920" alt="The Alchemist">
+        </div>
+        <div class="cart-item-info">
+          <h3>The Alchemist</h3>
+          <p class="author">Paulo Coelho</p>
+          <p class="cart-item-price">₹299</p>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <div class="cart-item-img">
+          <img src="https://gyaanstore.com/cdn/shop/files/223_6f5f1366-21a9-49a7-9c76-a834d90d28a9.png?v=1757578244&width=1920" alt="Sapiens">
+        </div>
+        <div class="cart-item-info">
+          <h3>Sapiens</h3>
+          <p class="author">Yuval Noah Harari</p>
+          <p class="cart-item-price">₹370</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cart-summary-box">
+      <h2>Order Summary</h2>
+      <div class="cart-row"><span>Items ()</span><span>₹0</span></div>
+      <div class="cart-row"><span>Shipping</span><span class="text-free">Free</span></div>
+      <!-- <div class="cart-row"><span>Discount</span><span>—</span></div> -->
+      <div class="cart-row total"><span>Total</span><span>₹0</span></div>
+
+      <div class="coupon-row">
+        <input type="text" placeholder="Enter coupon code">
+        <button type="button">Apply</button>
+      </div>
+
+      <a href="#" class="pay-btn">Proceed to Pay →</a>
+
+      <p class="cart-secure-note">🔒 Secure checkout · UPI · Cards · COD</p>
+    </div>
+
+  </div>
+
+  <div class="cart-recommendations">
+    <div class="section-header">
+      <div>
+        <p class="section-label">Recommended</p>
+        <h2>You Might Also Like</h2>
+      </div>
+    </div>
+    <div class="books-grid">
+
+      <div class="book-card">
+        <div class="imgbook">
+          <span class="book-tag tag-best">Bestseller</span>
+          <img src="https://gyaanstore.com/cdn/shop/files/234_aaa800ec-5535-4c1e-856a-e003ddf332e5.png?v=1757578335&width=1920" alt="Ikigai">
+        </div>
+        <div class="book-info">
+          <h3>Ikigai</h3>
+          <p class="author">Hector Garcia</p>
+          <div class="book-footer"><span class="price">₹529</span></div>
+          <button class="add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="imgbook">
+          <span class="book-tag tag-new">New</span>
+          <img src="https://gyaanstore.com/cdn/shop/files/8_c06b38c0-1517-4685-9bf2-86941a7de9e8.png?v=1757578262" alt="The Kite Runner">
+        </div>
+        <div class="book-info">
+          <h3>The Kite Runner</h3>
+          <p class="author">Khaled Hosseini</p>
+          <div class="book-footer"><span class="price">₹479</span></div>
+          <button class="add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="imgbook">
+          <img src="https://gyaanstore.com/cdn/shop/files/0ifv.png?v=1767441899&width=713" alt="Orbital">
+        </div>
+        <div class="book-info">
+          <h3>Orbital</h3>
+          <p class="author">Samantha Harvey</p>
+          <div class="book-footer">
+            <span class="before-price">₹499</span>
+            <span class="price">₹350</span>
+          </div>
+          <button class="add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="imgbook">
+          <span class="book-tag tag-sale">Sale</span>
+          <img src="https://gyaanstore.com/cdn/shop/files/233_0375219f-2590-47c8-bf98-76db85d64139.png?v=1757578216&width=713" alt="Norwegian Wood">
+        </div>
+        <div class="book-info">
+          <h3>Norwegian Wood</h3>
+          <p class="author">Haruki Murakami</p>
+          <div class="book-footer">
+            <span class="before-price">₹350</span>
+            <span class="price">₹249</span>
+          </div>
+          <button class="add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="imgbook">
+          <img src="https://gyaanstore.com/cdn/shop/files/231_c5b7e150-a9aa-4e77-b63f-1a445c30f07b.png?v=1757578225&width=360" alt="Thinking, Fast and Slow">
+        </div>
+        <div class="book-info">
+          <h3>Thinking, Fast and Slow</h3>
+          <p class="author">Daniel Kahneman</p>
+          <div class="book-footer"><span class="price">₹349</span></div>
+          <button class="add-cart">Add to Cart</button>
+        </div>
+      </div>
+
+     
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">The CozyPage</div>
+      <p>A curated bookstore for curious minds. Every book is a door to a new world — we help you find the right one.</p>
+      
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Bestsellers</a></li>
+        <li><a href="#">Used Books</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">Track Order</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 The Cozy Page Bookstore. All rights reserved.</span>
+    <span>Made with ❤️ for book lovers</span>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+   
+
+</body>
+</html>

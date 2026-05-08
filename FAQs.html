@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+#faq { 
+  padding: 4.5rem 5%; 
+  background: #f7f1e8; 
+}
+#faq h2 { 
+  font-family: 'Cormorant Garamond', Georgia, serif; 
+  font-size: 2.1rem; 
+  color: #2e1a0e; 
+  margin-bottom: 2.5rem;
+}
+.faq-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 1rem;
+}
+.faq-item { 
+  background: #fdfaf5; 
+  border: 1.5px solid #e5d8c8; 
+  border-radius: 6px; 
+  overflow: hidden;
+}
+.faq-item input[type="checkbox"] { 
+  display: none; 
+}
+.faq-question { 
+  width: 100%; 
+  background: none; 
+  border: none; 
+  padding: 1.15rem 1.4rem; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  font-family:'Outfit', sans-serif; 
+  font-size: .93rem; 
+  font-weight: 500; 
+  color: #2e1a0e; 
+  cursor: pointer; 
+  transition: background 0.25s ease; 
+}
+.faq-question:hover {
+  background: #f0e8da;
+ }
+.faq-icon { 
+  font-size: 1.3rem; 
+  color: #c8763a; 
+  flex-shrink: 0; 
+  margin-left: .8rem; 
+  font-weight: 300; 
+  transition: transform .25s ease;
+}
+.faq-answer { 
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height .35s ease, 
+  padding .25s ease; 
+  padding: 0 1.4rem; 
+  font-size: .9rem; 
+  color: #5a4a38; 
+  font-weight: 300; 
+  line-height: 1.75; 
+}
+.faq-item input:checked ~ .faq-answer { 
+  max-height: 320px;
+  padding: 0 1.4rem 1.2rem;
+}
+.faq-item input:checked ~ .faq-question .faq-icon { 
+  transform: rotate(45deg);
+}
+
+/* FAQ still-need-help CTA section */
+.faq-cta {
+  background:#fdfaf5;
+  padding: 3.5rem 5%;
+  text-align: center;
+  border-top: 1px solid #e5d8c8;
+}
+.faq-cta h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  color: #2e1a0e;
+  margin-bottom: .7rem;
+}
+.faq-cta p {
+  color: #6a5748;
+  font-weight: 300;
+  margin-bottom: 1.8rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+    
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">The Cozy<span>Page</span></a>
+  <ul class="nav-links">
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="FAQs.html" class="nav-active">FAQs</a></li>
+     <li><a href="login.html">Sign Up</a></li>
+    <li><a href="cart.html" class="nav-cta">🛒 Cart</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <p class="section-label">Got Questions?</p>
+  <h1>Frequently Asked Questions</h1>
+  <p>Everything you need to know about shopping at The CozyPage. Can't find your answer? <a href="contact.html">Contact us</a>.</p>
+</section>
+
+<section id="faq">
+  <div class="faq-grid">
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq1">
+      <label class="faq-question" for="faq1">
+        Do you offer home delivery?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">Yes! We deliver across India. Orders above ₹499 get free shipping. Standard delivery takes 3–5 business days. Express delivery (1–2 days) is available at an additional charge of ₹99.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq2">
+      <label class="faq-question" for="faq2">
+        Can I return a book if I don't like it?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">We accept returns within 7 days of delivery, provided the book is in its original condition. Simply contact us and we'll arrange a pickup. Refunds are processed within 5–7 business days.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq3">
+      <label class="faq-question" for="faq3">
+        Do you sell second-hand or used books?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">Absolutely! We have a curated section of pre-loved books in excellent condition at 40–60% off the original price. Visit our store or check the "Used Books" section online.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq4">
+      <label class="faq-question" for="faq4">
+        Can I place bulk or gift orders?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">Yes! We offer special discounts for bulk orders (10+ books). We also provide custom gift wrapping and personalised notes. Contact us via the form for a custom quote.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq5">
+      <label class="faq-question" for="faq5">
+        How can I track my order?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">Once your order is shipped, you'll receive a tracking link via email and SMS. You can also enter your order ID on our tracking page to get real-time updates.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq6">
+      <label class="faq-question" for="faq6">
+        What payment methods do you accept?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">We accept UPI, Credit/Debit Cards, Net Banking, and Cash on Delivery. All online payments are secured with 256-bit SSL encryption.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq7">
+      <label class="faq-question" for="faq7">
+        Can I request a book that's not in stock?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">Yes! Use the contact form to request a specific title. We'll do our best to source it within 7–10 business days and notify you once it's available.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq8">
+      <label class="faq-question" for="faq8">
+        Do you have a loyalty or membership program?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">Yes! Our PageTurner Club members earn 1 point per ₹10 spent. Points can be redeemed for discounts on future purchases. Membership is free — sign up with any order!</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq9">
+      <label class="faq-question" for="faq9">
+        Do you offer gift wrapping?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">Yes! We offer beautiful gift wrapping with a personalised handwritten message card for just ₹49 per item. Select the gift wrap option at checkout.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq10">
+      <label class="faq-question" for="faq10">
+        How do I use a coupon code?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">On the cart page, enter your coupon code in the "Enter coupon code" field and click Apply. The discount will be automatically reflected in your order total.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq11">
+      <label class="faq-question" for="faq11">
+        Can I cancel my order after placing it?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">Orders can be cancelled within 2 hours of placement. After that, the order enters processing and cannot be cancelled. Please contact us immediately if you need to cancel.</div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq12">
+      <label class="faq-question" for="faq12">
+        Do you ship internationally?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">Currently we ship only within India. We are working on international shipping and hope to launch it soon. Subscribe to our newsletter to be the first to know!</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="faq-cta">
+  <p class="section-label">Still Stuck?</p>
+  <h2>We're Happy to Help</h2>
+  <p>Our team is available Mon–Sat, 10am to 8pm. Drop us a message anytime!</p>
+  <a href="contact.html" class="btn-primary">Contact Us →</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">The CozyPage</div>
+      <p>A curated bookstore for curious minds. Every book is a door to a new world — we help you find the right one.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Bestsellers</a></li>
+        <li><a href="#">Used Books</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">Track Order</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 The Cozy Page Bookstore. All rights reserved.</span>
+    <span>Made with ❤️ for book lovers</span>
+  </div>
+</footer>
+
+
+  </div>
+</section>
+</body>
+</html>

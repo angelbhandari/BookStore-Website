@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sign Up – The CozyPage</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  background-color: #3a1f0d;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV */
+nav {
+  padding: 18px 40px;
+  background: #2c1608;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: #f5e6c8;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.logo span { color: #c8781a; }
+
+/* MAIN */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  background: #f7f0e6;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.card h1 {
+  font-family: 'Playfair Display', serif;
+  color: #2c1608;
+  margin-bottom: 10px;
+}
+
+.sub {
+  font-size: 13px;
+  color: #7a6050;
+  margin-bottom: 20px;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #d4b896;
+  border-radius: 6px;
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #2c1608;
+  color: #f5e6c8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #3d2010;
+}
+
+/* LINK */
+.link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.link a {
+  color: #c8781a;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html" class="logo">The Cozy<span>Page</span></a>
+</nav>
+
+<main>
+  <div class="card">
+    <h1>Create Account 📚</h1>
+    <p class="sub">Join CozyPage and start your reading journey</p>
+
+    <form id="signupForm">
+
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+
+      <button class="btn">Sign Up</button>
+
+    </form>
+
+    <div class="link">
+      Already have an account? <a href="login.html">Login</a>
+    </div>
+  </div>
+</main>
+
+<script src="signup.js"></script>
+
+</body>
+</html>
