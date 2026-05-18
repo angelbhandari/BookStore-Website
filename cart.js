@@ -14,7 +14,7 @@ function displayCart() {
   const itemsPriceEl = document.querySelectorAll(".cart-row span")[1];
 
   if (cart.length === 0) {
-    cartList.innerHTML = "<p>Your cart is empty 😢</p>";
+    cartList.innerHTML = "<p>Your cart is empty </p>";
     itemCountEl.innerText = "Items (0)";
     itemsPriceEl.innerText = "₹0";
     totalPriceEl.innerText = "₹0";
@@ -37,7 +37,7 @@ function displayCart() {
         <p class="author">${item.author}</p>
         <p class="cart-item-price">${item.price}</p>
       </div>
-      <button onclick="removeItem(${index})">❌</button>
+      <button onclick="removeItem(${index})"></button>
     `;
 
     cartList.appendChild(div);
@@ -47,7 +47,7 @@ function displayCart() {
 
 
   itemCountEl.innerText = `Items (${cart.length})`;
-  itemsPriceEl.innerText = "₹" + total;       // FIXED ₹0 ISSUE
+  itemsPriceEl.innerText = "₹" + total;     
   totalPriceEl.innerText = "₹" + finalTotal;
 }
 
@@ -67,13 +67,13 @@ couponBtn.addEventListener("click", () => {
 
   if (code === "SAVE10") {
     discount = 100;
-    alert("Coupon Applied! ₹100 OFF 🎉");
+    alert("Coupon Applied! ₹100 OFF ");
   } else if (code === "BOOK20") {
     discount = 200;
-    alert("Coupon Applied! ₹200 OFF 🎉");
+    alert("Coupon Applied! ₹200 OFF ");
   } else {
     discount = 0;
-    alert("Invalid Coupon ❌");
+    alert("Invalid Coupon ");
   }
 
   displayCart();
@@ -85,23 +85,20 @@ payBtn.innerText = "Place Order →";
 
 payBtn.addEventListener("click", () => {
 
-  // 🔐 CHECK LOGIN FIRST
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   if (!currentUser) {
-    alert("Please login first to place order 🔐");
+    alert("Please login first to place order ");
     window.location.href = "login.html";
     return;
   }
 
-  // 🛒 CHECK EMPTY CART
   if (cart.length === 0) {
-    alert("Your cart is empty 😢");
+    alert("Your cart is empty ");
     return;
   }
 
-  // ✅ PLACE ORDER
-  alert("🎉 Order Placed Successfully!");
+  alert(" Order Placed Successfully!");
 
   cart = [];
   localStorage.removeItem("cart");
