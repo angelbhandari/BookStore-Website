@@ -22,7 +22,7 @@ const email = document.getElementById("email").value.trim().toLowerCase();
   const exists = users.find(u => u.email === email);
 
   if (exists) {
-    alert("User already exists ❌");
+    alert("User already exists ");
     return;
   }
 
@@ -31,7 +31,7 @@ const email = document.getElementById("email").value.trim().toLowerCase();
 
   localStorage.setItem("users", JSON.stringify(users));
 
-  alert("Account created successfully 🎉");
+  alert("Account created successfully ");
 
   window.location.href = "login.html";
 });
