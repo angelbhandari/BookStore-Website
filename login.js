@@ -7,7 +7,7 @@ const email = document.getElementById("email").value.trim().toLowerCase();
   const password = document.getElementById("password").value.trim();
 
   if (!email || !password) {
-    alert("Please fill in all fields 📚");
+    alert("Please fill in all fields ");
     return;
   }
 
@@ -18,15 +18,14 @@ const email = document.getElementById("email").value.trim().toLowerCase();
   );
 
   if (!user) {
-    alert("Invalid email or password ❌");
+    alert("Invalid email or password ");
     return;
   }
 
   localStorage.setItem("currentUser", JSON.stringify(user));
 
-  alert("Welcome back " + user.name + " 📚");
+  alert("Welcome back " + user.name );
 
-  // 🔁 Redirect to homepage
   window.location.href = "index.html";
 });
 
@@ -47,6 +46,6 @@ window.addEventListener("load", () => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   if (remembered === "true" && currentUser) {
-    alert("Welcome back " + currentUser.name + " 📖");
+    alert("Welcome back " + currentUser.name );
   }
 });
